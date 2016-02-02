@@ -19,7 +19,7 @@ In your HEAD tag include the webcomponents script and link the musical-note elem
 <link rel="import" href="bower_components/musical-note/musical-note.html">
 ```
 
-In your HTML create `<musical-note>` tags with the required value.
+In your HTML create `<musical-note>` tags with a value attribute set to a note name and octave. Middle C would have a value of c4.
 
 ```html
 <musical-note value="c"></musical-note>

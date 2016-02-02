@@ -34,8 +34,7 @@
         sharpVisibility: {
           type: String,
           value: "hidden"
-        },
-
+        }
       },
       attached: function() {
         this.setNameAndOctave();
@@ -48,7 +47,7 @@
       positions: {"c": 0, "d": -10, "e": -20, "f": -30, "g": -40, "a": -50,"b": -60},
       octaveOffsets: {3: 70, 4: 0, 5: -70, 6: -140},
       setNameAndOctave: function(){
-        var parts = this.value.split("");
+        var parts = this.value.toLowerCase().split("");
         if(parts.length == 3 && !isNaN(parts[2])){
           // if the note is like gb3
           this.name = parts[0] + "" + parts[1];
