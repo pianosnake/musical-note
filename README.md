@@ -12,10 +12,9 @@ Install using [Bower](http://bower.io/)
 bower install polymer-musical-note
 ```
 
-In your HEAD tag include the webcomponents script and link the musical-note element
+In your HEAD tag link the musical-note element
 
 ```
-<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <link rel="import" href="bower_components/musical-note/musical-note.html">
 ```
 
