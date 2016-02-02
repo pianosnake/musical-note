@@ -2,6 +2,8 @@
 
 A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef.
 
+![alt tag](demo/demo.png)
+
 ## Usage
 
 Install using [Bower](http://bower.io/)
