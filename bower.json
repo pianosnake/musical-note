@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/pianosnake/polymer-musical-note"
-  }
+  },
   "license": "MIT",
   "authors": [
     "Florin A. <pianosnake@gmail.com>"
