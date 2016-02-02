@@ -1,0 +1,16 @@
+{
+  "name": "musical-note",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pianosnake/polymer-musical-note",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
