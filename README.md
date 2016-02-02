@@ -1,4 +1,4 @@
-# <musical-note>
+# &lt;musical-note&gt;
 
 A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef.
 
