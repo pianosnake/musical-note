@@ -1,25 +1,41 @@
 <!doctype html>
 <html>
-  <head>
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script>
-      /*
-      window.Polymer = window.Polymer || {};
-      window.Polymer.dom = 'shadow';
-      */
-    </script>
-    <link rel="import" href="../musical-note.html">
-  </head>
-  <body>
+<head>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+    /*
+     window.Polymer = window.Polymer || {};
+     window.Polymer.dom = 'shadow';
+     */
+  </script>
+  <link rel="import" href="../musical-note.html">
+</head>
+<body>
 
-  <musical-note value="E3"></musical-note>
-  <musical-note value="C4"></musical-note>
-  <musical-note value="d4"></musical-note>
-  <musical-note value="e4"></musical-note>
-  <musical-note value="c#5"></musical-note>
-  <musical-note value="db5"></musical-note>
-  <musical-note value="eb5"></musical-note>
-  <musical-note value="f6"></musical-note>
+<p>Define note by name and octave</p>
+<musical-note value=db4></musical-note>
 
-  </body>
+<p>Define note using a number</p>
+  <musical-note value=56 flat></musical-note>
+
+<p>Update the value of a note using numbers. Sharps are used by default, but if the second parameter to setValue is true, the note will be drawn using a flat.</p>
+<musical-note value="c3" id="firstNote"></musical-note>
+<script>
+  var start = 36;
+  var end = 80;
+  var current = start;
+  var firstNote = document.getElementById("firstNote");
+  var interval = setInterval(function(){
+    firstNote.setValue(current, true);
+    document.getElementById("noteValue").innerText = firstNote.getValue();
+    document.getElementById("noteNumericValue").innerText = firstNote.getNumericValue();
+    current++;
+    if(current > end){
+      current = start;
+    }
+  }, 500)
+</script>
+<p>Get the value of a note: <span id="noteValue"></span> </p>
+<p>Get the numeric value of a note: <span id="noteNumericValue"></span> </p>
+</body>
 </html>
