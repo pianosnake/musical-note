@@ -4,7 +4,7 @@ A [Polymer](https://www.polymer-project.org) element for a musical note in trebl
 
 ![alt tag](https://raw.githubusercontent.com/pianosnake/polymer-musical-note/master/demo/demo.png)
 
-## Usage
+## Install
 
 Install using [Bower](http://bower.io/)
 
@@ -18,37 +18,8 @@ In your HEAD tag link the musical-note element
 <link rel="import" href="bower_components/musical-note/musical-note.html">
 ```
 
-In your HTML create `<musical-note>` tags with a value attribute set to a note name and octave. Middle C would have a value of c4. Numeric values are also supported. With numeric values add a *flat* attribute if you prefer the note to be rendered using a flat instead of a sharp.
-
-```
-<musical-note value="c"></musical-note>
-<musical-note value="c#5"></musical-note>
-<musical-note value="eb5"></musical-note>
-<musical-note value="56" flat></musical-note>
-```
-The <musical-note> tags can be referenced like any other HTML elements.
-
-```javascript
-var note = document.getElementById("myNote");
-```
-Change the value of an existing note using `setValue` and a MIDI numeric value. Sharps are used by default, but if the second parameter is set to *true*, the note will be drawn using a flat instead of a sharp.</p>
-
-```javascript
-note.setValue(60, true);
-```
-
 ## Demo
-The included demo file can be viewed using [Polyserve](https://github.com/PolymerLabs/polyserve). Install Polyserve using npm.
-
-```
-npm install polyserve -g
-```
-From the root of this project run polyserve
-
-```
-polyserve
-```
-Visit the demo page at [http://localhost:8080/components/musical-note/demo/](http://localhost:8080/components/musical-note/demo/)
+In your HTML create `<musical-note>` tags. See usage examples and a live demo here [http://pianosnake.github.io/polymer-musical-note/](http://pianosnake.github.io/polymer-musical-note/)
 
 ## License
 
