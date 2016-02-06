@@ -2,7 +2,7 @@
   "name": "musical-note",
   "description": "A Polymer element for a musical note in treble clef",
   "version": "0.3.0",
-  "homepage": "https://github.com/pianosnake/polymer-musical-note",
+  "homepage": "http://pianosnake.github.io/polymer-musical-note/",
   "main": "musical-note.html",
   "repository": {
     "type": "git",
