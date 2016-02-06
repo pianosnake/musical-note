@@ -2,24 +2,33 @@
 <html>
 <head>
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <script>
-    /*
-     window.Polymer = window.Polymer || {};
-     window.Polymer.dom = 'shadow';
-     */
-  </script>
   <link rel="import" href="../musical-note.html">
+  <style>
+    body{
+      font-family: sans-serif;
+    }
+    em{
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
+<h1>&lt;musical-note&gt; demo</h1>
+<p>Define note by name and octave in the <em>value</em> attribute.</p>
+<musical-note value=d#4></musical-note>
 
-<p>Define note by name and octave</p>
-<musical-note value=db4></musical-note>
+<p>Define using a MIDI note number. Middle C is 48. C# above that is 49.</p>
+<musical-note value=49></musical-note>
 
-<p>Define note using a number</p>
-  <musical-note value=56 flat></musical-note>
+<p>Sharps are used by default, but the <em>flat</em> attribute will ensure the note is drawn using a flat.</p>
+<musical-note value=49 flat></musical-note>
 
-<p>Update the value of a note using numbers. Sharps are used by default, but if the second parameter to setValue is true, the note will be drawn using a flat.</p>
-<musical-note value="c3" id="firstNote"></musical-note>
+<p>Create a taller container by specifying a <em>height</em> attribute.</p>
+<musical-note value=66 height=120></musical-note>
+
+<p>Update the value of a note using the <em>setValue</em> method. If the second parameter to <em>setValue</em> is true the note will be drawn using a flat.</p>
+<musical-note value="c3" id="firstNote" height=160></musical-note>
+
 <script>
   var start = 36;
   var end = 80;
@@ -33,7 +42,7 @@
     if(current > end){
       current = start;
     }
-  }, 500)
+  }, 100)
 </script>
 <p>Get the value of a note: <span id="noteValue"></span> </p>
 <p>Get the numeric value of a note: <span id="noteNumericValue"></span> </p>

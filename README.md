@@ -28,17 +28,13 @@ In your HTML create `<musical-note>` tags with a value attribute set to a note n
 ```
 The <musical-note> tags can be referenced like any other HTML elements.
 
-```html
-<musical-note value="c" id="firstnote"></musical-note>
+```javascript
+var note = document.getElementById("myNote");
 ```
+Change the value of an existing note using `setValue` and a MIDI numeric value. Sharps are used by default, but if the second parameter is set to *true*, the note will be drawn using a flat instead of a sharp.</p>
 
 ```javascript
-var firstNote = document.getElementById("firstNote");
-```
-Change the value of an existing note using `setValue`. Sharps are used by default, but if the second parameter is set to *true*, the note will be drawn using a flat instead of a sharp.</p>
-
-```javascript
-firstNote.setValue(60, true);
+note.setValue(60, true);
 ```
 
 ## Demo
