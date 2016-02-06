@@ -1,6 +1,6 @@
 # &lt;musical-note&gt;
 
-A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef.
+A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef. See usage examples and a live demo here [http://pianosnake.github.io/polymer-musical-note/](http://pianosnake.github.io/polymer-musical-note/)
 
 ![alt tag](https://raw.githubusercontent.com/pianosnake/polymer-musical-note/master/demo/demo.png)
 
@@ -17,9 +17,6 @@ Link the `musical-note` element in the HEAD tag.
 ```
 <link rel="import" href="bower_components/musical-note/musical-note.html">
 ```
-
-## Demo
-In your HTML create `<musical-note>` tags. See usage examples and a live demo here [http://pianosnake.github.io/polymer-musical-note/](http://pianosnake.github.io/polymer-musical-note/)
 
 ## License
 
