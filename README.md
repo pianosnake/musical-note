@@ -1,6 +1,6 @@
 # &lt;musical-note&gt;
 
-A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef. See usage examples and a live demo here [http://pianosnake.github.io/polymer-musical-note/](http://pianosnake.github.io/polymer-musical-note/)
+A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef. See [usage examples and a live demo here](http://pianosnake.github.io/polymer-musical-note/)
 
 ![alt tag](https://raw.githubusercontent.com/pianosnake/polymer-musical-note/master/demo/demo.png)
 
