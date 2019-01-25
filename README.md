@@ -1,22 +1,23 @@
 # &lt;musical-note&gt;
 
-A [Polymer](https://www.polymer-project.org) element for a musical note in treble clef. See usage examples and a live demo here [http://pianosnake.github.io/polymer-musical-note/](http://pianosnake.github.io/polymer-musical-note/)
-
-![alt tag](https://raw.githubusercontent.com/pianosnake/polymer-musical-note/master/demo/demo.png)
+A custom HTML element for a musical note in treble clef. See usage examples and a live demo here [http://pianosnake.github.io/musical-note/](http://pianosnake.github.io/musical-note/)
 
 ## Install
 
-Install using [Bower](http://bower.io/)
+Download the musical-note.js file from this repo and load the file into your page's HEAD section. The script can also be referenced directly from github:
 
 ```
-bower install polymer-musical-note
+<script src="//pianosnake.github.io/musical-note/musical-note.js"></script>
 ```
 
-Link the `musical-note` element in the HEAD tag.
+Create a musical-note tag in the BODY of your page: 
 
 ```
-<link rel="import" href="bower_components/musical-note/musical-note.html">
+<musical-note value="db5"></musical-note>
 ```
+An SVG image will be inserted with the given value
+
+![alt tag](example.png)
 
 ## License
 

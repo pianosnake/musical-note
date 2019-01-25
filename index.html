@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>musical-note by pianosnake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://jasonlong.github.io/cayman-theme/css/cayman.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://jasonlong.github.io/cayman-theme/css/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://jasonlong.github.io/cayman-theme/css/github-light.css" media="screen">
+  <script src="musical-note.js"></script>
+</head>
+
+<body>
+  <section class="page-header">
+    <h1 class="project-name">&lt;musical-note&gt;</h1>
+
+    <h2 class="project-tagline">A custom HTML element for a musical note.</h2>
+    <a href="https://github.com/pianosnake/musical-note" class="btn">View on GitHub</a>
+    <a href="https://github.com/pianosnake/musical-note/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/pianosnake/musical-note/tarball/master" class="btn">Download .tar.gz</a>
+  </section>
+
+  <section class="main-content">
+
+    <p>&lt;musical-note&gt; is a custom HTML element for a musical note in treble clef.</p>
+
+    <h2>Install</h2>
+    <p>Download the musical-note.js file from this repo using the 'Download' button and load the file into your page's HEAD section.
+      The script can also be referenced directly from github:</p>
+
+    <pre><code>&lt;script src="//pianosnake.github.io/musical-note/musical-note.js"&gt;&lt;/script&gt;
+</code></pre>
+
+    <h2>
+      <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage
+    </h2>
+
+    <p>In your page's BODY define a note by name and octave in the <code>value</code> attribute.</p>
+    <pre><code>&lt;musical-note value="d#4"&gt;&lt;/musical-note&gt;</code></pre>
+    <musical-note value=d#4></musical-note>
+
+    <p>Define using a MIDI note number. Middle C is 48. C# above that is 49.</p>
+    <pre><code>&lt;musical-note value="49"&gt;&lt;/musical-note&gt;</code></pre>
+    <musical-note value=49></musical-note>
+
+    <p>Sharps are used by default, but the <code>flat</code> attribute will ensure the note is drawn using a flat.</p>
+    <pre><code>&lt;musical-note value="49" flat&gt;&lt;/musical-note&gt;</code></pre>
+    <musical-note value=49 flat></musical-note>
+
+    <p>Create a taller container by specifying a <code>height</code> attribute.</p>
+    <pre><code>&lt;musical-note value="66" height="300"&gt;&lt;/musical-note&gt;</code></pre>
+    <musical-note value=66 height=300></musical-note>
+
+    <p>The tags can be referenced like any other HTML elements.</p>
+    <pre><code>&lt;musical-note value="c3" id="myNote" height="160"&gt;&lt;/musical-note&gt;</code></pre>
+    <div class="highlight highlight-source-js">
+      <pre><span class="pl-k">var</span> note <span class="pl-k">=</span> <span class="pl-smi">document</span>.<span
+      class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>myNote<span
+      class="pl-pds">"</span></span>);</pre>
+    </div>
+
+    <p>Change the value of an existing note using the <code>setValue</code> method. Sharps are used by default, but if
+      the
+      second parameter to <code>setValue</code> is set to <code>true</code>, the note will be drawn using a flat
+      instead
+      of a sharp.</p>
+
+    <div class="highlight highlight-source-js">
+      <pre><span class="pl-smi">note</span>.<span class="pl-en">setValue</span>(<span class="pl-c1">60</span>, <span
+      class="pl-c1">true</span>);</pre>
+    </div>
+
+    <musical-note value="c3" id="myNote" height=160></musical-note>
+
+    <p>Get the value of a note using <code>getValue()</code> <span id="noteValue"></span></p>
+
+    <p>Get the numeric value of a note <code>getNumericValue()</code> <span id="noteNumericValue"></span></p>
+
+    <script>
+      setTimeout(function () {
+        const start = 36;
+        const end = 80;
+        let current = start;
+        const myNote = document.getElementById("myNote");
+        const interval = setInterval(function () {
+          myNote.setValue(current, true);
+          document.getElementById("noteValue").innerText = myNote.getValue();
+          document.getElementById("noteNumericValue").innerText = myNote.getNumericValue();
+          current++;
+          if (current > end) {
+            current = start;
+          }
+        }, 100);
+      }, 3000);
+    </script>
+
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href="https://github.com/pianosnake/musical-note">musical-note</a>
+        is maintained by <a href="https://github.com/pianosnake">pianosnake</a>.</span>
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>
+        using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason
+          Long</a>.</span>
+    </footer>
+  </section>
+
+</body>
+
+</html>
